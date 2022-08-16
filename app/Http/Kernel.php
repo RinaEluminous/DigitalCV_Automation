@@ -68,5 +68,7 @@ class Kernel extends HttpKernel
         'is_admin' => \App\Http\Middleware\AdminAuth::class,
         'json.response' => \App\Http\Middleware\ForceJsonResponse::class,
         'cors' => \App\Http\Middleware\Cors::class,
+        'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
+	    'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
     ];
 }

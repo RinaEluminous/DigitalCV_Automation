@@ -25,8 +25,11 @@ Route::get('/clear_cache', function() {
     //Artisan::call('route:cache');
    return "Cache is cleared";
 });
+Route::get('/registration',[App\Http\Controllers\Admin\AuthController::class, 'registration'])->name('registration');
 
 Route::get('/admin',[App\Http\Controllers\Admin\AuthController::class, 'login'])->name('login');
+
+
 
 Route::get('logout',[App\Http\Controllers\Admin\AuthController::class, 'logout']);
 

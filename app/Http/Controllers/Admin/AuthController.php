@@ -19,6 +19,11 @@ class AuthController extends Controller
 
 
     }
+    public function registration()
+    {
+      return view('auth.register');
+        
+    }
     public function login(){
 
         return view('auth.login');
@@ -53,8 +58,8 @@ class AuthController extends Controller
             }
             else
             {
-              dd('Login Failed Wrong User Credentials');
-            // return back()->with('error','Login Failed Wrong User Credentials');
+           
+            return back()->with('error','Login Failed Wrong User Credentials');
             }
           }
         }
