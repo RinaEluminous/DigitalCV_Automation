@@ -53,12 +53,25 @@
 
                                         <div class="form-group m-b-20 row">
                                             <div class="col-12">
+                                                <label for="emailaddress">Role</label>
+                                                <option>
+                                                </option>
+
+                                                @error('email')
+                                                <span class="invalid-feedback" role="alert" style="color:white;">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-b-20 row">
+                                            <div class="col-12">
                                                 <label for="emailaddress">First name</label>
                                                 <input class="form-control @error('email') is-invalid @enderror"
-                                                    type="email" id="emailaddress" required=""
-                                                    placeholder="Enter your email" name="email"
-                                                    value="{{ old('email') }}" required autocomplete="email" autofocus
-                                                    placeholder="{{ __('Email Address') }}" required
+                                                    type="email" id="emailaddress" required="" placeholder="First name"
+                                                    name="email" value="{{ old('email') }}" required
+                                                    autocomplete="email" autofocus placeholder="{{ __('First name') }}"
+                                                    required
                                                     data-parsley-required-message='<p style="color:red;">Email is required</p>'>
 
                                                 @error('email')
@@ -72,9 +85,9 @@
                                             <div class="col-12">
                                                 <label for="emailaddress">Last name</label>
                                                 <input class="form-control @error('email') is-invalid @enderror"
-                                                    type="email" id="emailaddress" required=""
-                                                    placeholder="Enter your email" name="email"
-                                                    value="{{ old('email') }}" required autocomplete="email" autofocus
+                                                    type="email" id="emailaddress" required="" placeholder="Last name"
+                                                    name="email" value="{{ old('email') }}" required
+                                                    autocomplete="email" autofocus
                                                     placeholder="{{ __('Email Address') }}" required
                                                     data-parsley-required-message='<p style="color:red;">Email is required</p>'>
 
@@ -90,8 +103,8 @@
                                                 <label for="emailaddress">Email address</label>
                                                 <input class="form-control @error('email') is-invalid @enderror"
                                                     type="email" id="emailaddress" required=""
-                                                    placeholder="Enter your email" name="email"
-                                                    value="{{ old('email') }}" required autocomplete="email" autofocus
+                                                    placeholder="Email address" name="email" value="{{ old('email') }}"
+                                                    required autocomplete="email" autofocus
                                                     placeholder="{{ __('Email Address') }}" required
                                                     data-parsley-required-message='<p style="color:red;">Email is required</p>'>
 
@@ -106,9 +119,9 @@
                                             <div class="col-12">
                                                 <label for="emailaddress">Mobile No</label>
                                                 <input class="form-control @error('email') is-invalid @enderror"
-                                                    type="email" id="emailaddress" required=""
-                                                    placeholder="Enter your email" name="email"
-                                                    value="{{ old('email') }}" required autocomplete="email" autofocus
+                                                    type="email" id="emailaddress" required="" placeholder="Mobile No"
+                                                    name="email" value="{{ old('email') }}" required
+                                                    autocomplete="email" autofocus
                                                     placeholder="{{ __('Email Address') }}" required
                                                     data-parsley-required-message='<p style="color:red;">Email is required</p>'>
 
